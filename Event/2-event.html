@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+   <button class="mouseenter">mouseenter</button>
+   <button class="mouseleave">mouseleave</button>
+   <button class="hover">hover</button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aut debitis, dolorem dolores ducimus excepturi </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script>
+           $(function(){
+
+                $(".mouseenter").mouseenter(function(){
+                    $("p").css("background-color", "yellow");
+                });
+
+                $(".mouseleave").mouseleave(function(){
+                    $("p").css("background-color", "lightgray");
+                });
+
+                $(".hover").hover(function(){
+                    $(this).css("background-color", "#000");
+                    },
+                    function(){
+                    $(this).css("background-color", "#00f");
+                 });
+           });
+       </script>
+    </body>
+</html>
